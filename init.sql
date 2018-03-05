@@ -1,0 +1,25 @@
+CREATE TABLE AUTHOR (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE BOOK (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  title varchar(255) NOT NULL,
+  author_id int(10) unsigned NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO AUTHOR VALUES(1, "John Heinnickel");
+INSERT INTO AUTHOR VALUES(2, "Jim Burk");
+INSERT INTO AUTHOR VALUES(3, "David Holman");
+INSERT INTO AUTHOR VALUES(4, "Janice Lester");
+
+INSERT INTO BOOK VALUES(1, "Coding 101", 1);
+INSERT INTO BOOK VALUES(2, "Miss Molly", 3);
+INSERT INTO BOOK VALUES(3, "Cooking With Fire", 3);
+INSERT INTO BOOK VALUES(4, "Space Bugs", 4);
+INSERT INTO BOOK VALUES(5, "Science", 4);
+
+COMMIT;
